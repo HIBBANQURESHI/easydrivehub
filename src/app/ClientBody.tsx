@@ -8,4 +8,4 @@ export function ClientBody({ children }: { children: React.ReactNode }) {
       {children}
     </ThemeProvider>
   );
-}
+} 
