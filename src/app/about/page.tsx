@@ -126,48 +126,12 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl"
-            >
-              <Image
-                src="/images/mechanic-checking.jpg"
-                alt="Mechanic working"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover hover:scale-105 transition-transform duration-500"
-                style={{ objectPosition: "center" }}
-              />
-            </motion.div>
-            <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={stagger}
               className="space-y-8"
             >
-              <motion.div variants={fadeIn} className="bg-[#820000] text-[#fdeecd] p-10 rounded-2xl shadow-2xl">
-                <h3 className="text-3xl font-bold mb-8">Working Hours</h3>
-                <ul className="space-y-6">
-                  {[
-                    { day: "Monday - Friday", hours: "8:00 AM - 5:00 PM" },
-                    { day: "Saturday", hours: "9:00 AM - 2:00 PM" },
-                    { day: "Sunday", hours: "Closed" }
-                  ].map((schedule, index) => (
-                    <motion.li 
-                      key={index}
-                      variants={fadeIn}
-                      className="flex justify-between items-center py-4 px-6 bg-[#fdeecd]/5 rounded-xl hover:bg-[#fdeecd]/10 transition-colors"
-                    >
-                      <span className="font-medium">{schedule.day}</span>
-                      <span className={schedule.day === "Sunday" ? "text-[#fdeecd]/70" : "text-[#fdeecd]"}>
-                        {schedule.hours}
-                      </span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
             </motion.div>
           </div>
         </div>
