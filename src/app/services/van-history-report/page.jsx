@@ -69,7 +69,7 @@ export default function VanHistoryReportPage() {
             {[
               {
                 title: "Basic Van Report",
-                price: "52.99",
+                price: "54.99",
                 features: ["Vehicle Overview", "Accident History", "Odometer Check", "Title Records", "Cargo Space History"],
                 popular: false
               },

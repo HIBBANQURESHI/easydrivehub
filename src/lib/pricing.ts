@@ -16,7 +16,7 @@ export const VEHICLE_PRICING = {
     'fleet-package': 11999
   },
   van: {
-    'basic-van': 5299,
+    'basic-van': 5499,
     'commercial-pro': 7299,
     'fleet-package': 11499
   }
