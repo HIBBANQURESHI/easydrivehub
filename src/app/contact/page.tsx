@@ -148,7 +148,7 @@ export default function ContactPage() {
                     type="text"
                     value={formData.vin}
                     onChange={(e) => setFormData({...formData, vin: e.target.value})}
-                    placeholder="VIN Number (Optional)"
+                    placeholder="VIN Number"
                     className="w-full px-5 py-4 border-2 border-[#fdeecd] rounded-xl focus:ring-2 focus:ring-[#820000] focus:border-transparent bg-transparent"
                   />
                 </div>
@@ -200,7 +200,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Our Office</h4>
-                      <p className="text-[#fdeecd]/90">17102 wellinghoff court, Richmond TX 77407</p>
+                      <p className="text-[#fdeecd]/90">Texas</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-6 p-6 bg-[#fdeecd]/10 rounded-xl hover:bg-[#fdeecd]/15 transition-colors">
@@ -220,7 +220,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Working Hours</h4>
-                      <p className="text-[#fdeecd]/90">Mon-Sun: 8:00 AM - 5:00 PM</p>
+                      <p className="text-[#fdeecd]/90">24/7</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-6 p-6 bg-[#fdeecd]/10 rounded-xl hover:bg-[#fdeecd]/15 transition-colors">
