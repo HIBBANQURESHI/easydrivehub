@@ -36,7 +36,7 @@ export default function PaymentClient() {
       }
 
       try {
-        const response = await fetch('http://localhost:5000/api/payment-intent', {
+        const response = await fetch('/api/payment-intent', {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ vehicle, package: pkg })

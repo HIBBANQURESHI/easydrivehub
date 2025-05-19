@@ -93,7 +93,7 @@ export function Footer() {
               <h3 className="text-base font-medium">Company</h3>
               <div className="border-t border-[#fdeecd]/10 pt-2">
                 <ul className="space-y-2">
-                  {['About Us', 'Contact Us'].map((item) => (
+                  {['about', 'contact'].map((item) => (
                     <li key={item}>
                       <Link
                         href={`/${item.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}`}
@@ -115,7 +115,7 @@ export function Footer() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <MapPin className="h-4 w-4 mr-3 mt-0.5 text-[#fdeecd]" />
-                    <span className="text-white/70 text-sm">17102 wellinghoff court, Richmond TX 77407</span>
+                    <span className="text-white/70 text-sm">Texas</span>
                   </li>
                   <li className="flex items-center">
                     <Mail className="h-4 w-4 mr-3 text-[#fdeecd]" />
@@ -134,10 +134,6 @@ export function Footer() {
                     >
                       +1 (806) 702 0700
                     </a>
-                  </li>
-                  <li className="flex items-center">
-                    <Clock className="h-4 w-4 mr-3 text-[#fdeecd]" />
-                    <span className="text-white/70 text-sm">Mon - Fri: 9:00AM - 5:00PM</span>
                   </li>
                 </ul>
               </div>
