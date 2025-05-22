@@ -68,7 +68,7 @@ export default function VanHistoryReportPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                title: "Basic Van Report",
+                title: "Basic Van",
                 price: "54.99",
                 features: ["Vehicle Overview", "Accident History", "Odometer Check", "Title Records", "Cargo Space History"],
                 popular: false
