@@ -70,19 +70,19 @@ export default function VanHistoryReportPage() {
               {
                 title: "Basic Van",
                 price: "54.99",
-                features: ["Vehicle Overview", "Accident History", "Odometer Check", "Title Records", "Cargo Space History"],
+                features: ["Vehicle Overview", "Accident History", "Odometer Check", "Title Records", "Cargo Space History", "6 to 12 business hours"],
                 popular: false
               },
               {
                 title: "Commercial Pro",
                 price: "72.99",
-                features: ["Full History Report", "Commercial Use Verification", "Engine Analysis", "Maintenance Records", "Weight Capacity Check", "Recalls"],
+                features: ["Full History Report", "Commercial Use Verification", "Engine Analysis", "Maintenance Records", "Weight Capacity Check", "Recalls", "4 to 8 business hours"],
                 popular: true
               },
               {
                 title: "Fleet Package",
                 price: "114.99",
-                features: ["Unlimited Reports", "Fleet Management Tools", "Bulk Processing", "API Access", "Priority Support", "Custom Load Analysis"],
+                features: ["Unlimited Reports", "Fleet Management Tools", "Bulk Processing", "API Access", "Priority Support", "Custom Load Analysis", "3 to 6 business hours"],
                 popular: false
               }
             ].map((pkg, index) => (

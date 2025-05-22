@@ -70,19 +70,19 @@ export default function TruckHistoryReportPage() {
               {
                 title: "Basic Report",
                 price: "54.99",
-                features: ["Vehicle Overview", "Accident History", "Odometer Check", "Title Records", "Basic Specs"],
+                features: ["Vehicle Overview", "Accident History", "Odometer Check", "Title Records", "Basic Specs", "6 to 12 business hours"],
                 popular: false
               },
               {
                 title: "Commercial Pro",
                 price: "79.99",
-                features: ["Full History Report", "Commercial Use Verification", "Engine Analysis", "Maintenance Records", "Theft Check", "Recalls"],
+                features: ["Full History Report", "Commercial Use Verification", "Engine Analysis", "Maintenance Records", "Theft Check", "Recalls", "4 to 8 business hours"],
                 popular: true
               },
               {
                 title: "Fleet Package",
                 price: "119.99",
-                features: ["Unlimited Reports", "Fleet Management Tools", "Bulk Processing", "API Access", "Priority Support", "Custom Analytics"],
+                features: ["Unlimited Reports", "Fleet Management Tools", "Bulk Processing", "API Access", "Priority Support", "Custom Analytics", "3 to 6 business hours"],
                 popular: false
               }
             ].map((pkg, index) => (

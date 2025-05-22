@@ -73,19 +73,19 @@ export default function CarHistoryReportPage() {
               {
                 title: "Startup Package",
                 price: "$49.99",
-                features: ["Vehicle Overview", "Market Value", "Accident Records", "Salvage Records", "Specifications", "Sales Listing"],
+                features: ["Vehicle Overview", "Market Value", "Accident Records", "Salvage Records", "Specifications", "Sales Listing", "6 to 12 business hours"],
                 popular: false
               },
               {
                 title: "Promotional Package",
                 price: "$74.99",
-                features: ["Vehicle Overview", "Market Value", "Impounds", "Open Recalls", "Expired Warranties", "Specifications"],
+                features: ["Vehicle Overview", "Market Value", "Impounds", "Open Recalls", "Expired Warranties", "Specifications", "4 to 8 business hours"],
                 popular: true
               },
               {
                 title: "Premium Package",
                 price: "$99.99",
-                features: ["Full Overview", "Theft Records", "Title Records", "Market Value", "Accident Records", "Salvage Records", "Impounds", "Open Recalls"],
+                features: ["Full Overview", "Theft Records", "Title Records", "Market Value", "Accident Records", "Salvage Records", "Impounds", "Open Recalls", "3 to 6 business hours"],
                 popular: false
               }
             ].map((pkg, index) => (

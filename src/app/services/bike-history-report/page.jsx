@@ -73,19 +73,19 @@ export default function BikeHistoryReportPage() {
               {
                 title: "Basic Report",
                 price: "$49.99",
-                features: ["Frame History Check", "Ownership Verification", "Theft Records", "Basic Specifications", "Market Value Estimate"],
+                features: ["Frame History Check", "Ownership Verification", "Theft Records", "Basic Specifications", "Market Value Estimate", " 6 to 12 business hours"],
                 popular: false
               },
               {
                 title: "Pro Rider",
                 price: "$74.99",
-                features: ["Full Component History", "Accident Reports", "Maintenance Records", "Drivetrain Analysis", "Weight Certification", "Recalls"],
+                features: ["Full Component History", "Accident Reports", "Maintenance Records", "Drivetrain Analysis", "Weight Certification", "Recalls", "4 to 8 business hours"],
                 popular: true
               },
               {
                 title: "Premium Package",
                 price: "$99.99",
-                features: ["Lifetime History", "Professional Modifications", "Racing History", "Component Authenticity", "Insurance Records", "24/7 Support"],
+                features: ["Lifetime History", "Professional Modifications", "Racing History", "Component Authenticity", "Insurance Records", "24/7 Support", "3 to 6 business hours"],
                 popular: false
               }
             ].map((pkg, index) => (
