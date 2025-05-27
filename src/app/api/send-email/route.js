@@ -1,3 +1,4 @@
+// src/app/api/send-email/route.js
 import nodemailer from 'nodemailer';
 
 export async function POST(request) {
@@ -7,7 +8,7 @@ export async function POST(request) {
     service: 'gmail',
     auth: {
       user: 'sofiajohnson1979@gmail.com',
-      pass: 'xbat eeae wfzp mvzy'
+      pass: 'xbateaeewfzpmvzy' // Remove spaces from app password
     }
   });
 
@@ -17,9 +18,9 @@ export async function POST(request) {
     subject: body.subject || 'New Contact Form Submission',
     html: `
       <h3>New ${body.formType} Submission</h3>
-      ${Object.entries(body.data).map(([key, value]) => `
-        <p><strong>${key}:</strong> ${value}</p>
-      `).join('')}
+      ${Object.entries(body.data).map(([key, value]) => 
+        `<p><strong>${key}:</strong> ${value}</p>`
+      ).join('')}
     `
   };
 
@@ -27,6 +28,16 @@ export async function POST(request) {
     await transporter.sendMail(mailOptions);
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+    console.error('Email send error:', error); // Add detailed logging
+    return new Response(JSON.stringify({ 
+      error: error.message,
+      code: error.code,
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+    }), { 
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
   }
 }
