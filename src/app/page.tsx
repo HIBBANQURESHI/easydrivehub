@@ -295,7 +295,7 @@ export default function Home() {
                   {
                     icon: 'M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z',
                     title: "Email Support",
-                    content: "contact@vincheck.com"
+                    content: "info@easydrivehub.com"
                   },
                   {
                     icon: 'M22 12A10.002 10.002 0 0 0 12 2v0M12 2a10.002 10.002 0 0 0-9.899 11.553v0M12 2a10.002 10.002 0 0 1 9.899 11.553v0M2 12h20',
