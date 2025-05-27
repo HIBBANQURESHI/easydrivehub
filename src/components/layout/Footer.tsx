@@ -132,7 +132,7 @@ export function Footer() {
                       href="tel:+12345678901"
                       className="text-white/70 hover:text-white text-sm transition-colors"
                     >
-                      +1 (806) 702 0700
+                      +1 (806) 203 7774
                     </a>
                   </li>
                 </ul>

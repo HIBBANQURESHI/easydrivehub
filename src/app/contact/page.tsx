@@ -230,7 +230,7 @@ export default function ContactPage() {
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Call Us</h4>
                       <a href="tel:+1234567890" className="text-[#fdeecd]/90 hover:text-[#fdeecd]">
-                        +1 (806) 702 0700
+                        +1 (806) 203 7774
                       </a>
                     </div>
                   </li>
