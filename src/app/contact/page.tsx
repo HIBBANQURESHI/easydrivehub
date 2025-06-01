@@ -236,21 +236,6 @@ export default function ContactPage() {
                   </li>
                 </ul>
               </div>
-
-              <motion.div 
-                whileHover={{ scale: 1.02 }}
-                className="w-full h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-[#fdeecd]"
-              >
-                <iframe
-                  title="Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16977.59997519852!2d-95.67877013156634!3d29.647395767624833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e08977a8c1a5%3A0xc8d58aed23b9efff!2s17102%20Wellinghoff%20Ct%2C%20Richmond%2C%20TX%2077407%2C%20USA!5e0!3m2!1sen!2s!4v1747090046681!5m2!1sen!2s"
-                  width="100%"
-                  height="100%"
-                  className="border-0"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              </motion.div>
             </motion.div>
           </motion.div>
         </div>
