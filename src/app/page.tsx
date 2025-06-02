@@ -84,10 +84,11 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="text-center lg:text-left">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                Your Free VIN Check Is Just<br className="hidden lg:block" /> A Click Away
+                Welcome to Easy Drive Hub<br className="hidden lg:block" />
               </h1>
               <p className="text-xl mb-10 text-[#fdeecd] max-w-2xl mx-auto lg:mx-0">
-                Instant, reliable vehicle history reports powered by industry-leading data sources.
+                Vehicle records are sourced from trusted, reputable channels and enhanced with insights from experienced automotive professionals.
+
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                 <Button
@@ -277,143 +278,145 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <section className="py-28 bg-[#F9F6EE]">
-        <div className="container-custom">
+      <section className="py-20 bg-white/10">
+        <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16"
+            className="glass-container bg-white/70 backdrop-blur-xl rounded-2xl border border-white/80 shadow-xl p-8 md:p-12"
           >
-            <div className="space-y-12">
-              <div>
-                <span className="text-[#820000] font-bold tracking-wider uppercase text-xs mb-6 inline-block">
-                  Contact Us
-                </span>
-                <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-                  Start Your Vehicle<br className="hidden md:block" /> Journey Today
-                </h2>
-                <p className="text-xl text-gray-600 max-w-2xl">
-                  Connect with our automotive experts for personalized assistance and comprehensive vehicle insights.
-                </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Left Content */}
+              <div className="space-y-10">
+                <div>
+                  <motion.span
+                    className="text-[#820000] font-bold tracking-wider uppercase text-xs mb-6 inline-block px-4 py-2 bg-[#820000]/10 backdrop-blur-sm rounded-full"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    Contact Us
+                  </motion.span>
+                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Start Your <span className="text-[#820000]">Vehicle Journey</span> Today
+                  </h2>
+                  <p className="text-lg text-gray-700 max-w-xl">
+                    Connect with our automotive experts for personalized assistance and comprehensive vehicle insights.
+                  </p>
+                </div>
+
+                <div className="space-y-8">
+                  {[
+                    {
+                      icon: 'M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z',
+                      title: "Email Support",
+                      content: "info@easydrivehub.com"
+                    },
+                    {
+                      icon: 'M22 12A10.002 10.002 0 0 0 12 2v0M12 2a10.002 10.002 0 0 0-9.899 11.553v0M12 2a10.002 10.002 0 0 1 9.899 11.553v0M2 12h20',
+                      title: "Live Chat",
+                      content: "Available 24/7"
+                    },
+                    {
+                      icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12h6M12 9v6',
+                      title: "Knowledge Base",
+                      content: "500+ Help Articles"
+                    }
+                  ].map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-start gap-6 p-6 bg-white/80 backdrop-blur-sm rounded-xl border border-white/90 shadow-sm hover:shadow-md transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="w-14 h-14 bg-[#820000]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="w-7 h-7 text-[#820000]"
+                        >
+                          <path d={feature.icon} />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                        <p className="text-gray-700">{feature.content}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
-              <div className="space-y-8">
-                {[
-                  {
-                    icon: 'M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z',
-                    title: "Email Support",
-                    content: "info@easydrivehub.com"
-                  },
-                  {
-                    icon: 'M22 12A10.002 10.002 0 0 0 12 2v0M12 2a10.002 10.002 0 0 0-9.899 11.553v0M12 2a10.002 10.002 0 0 1 9.899 11.553v0M2 12h20',
-                    title: "Live Chat",
-                    content: "Available 24/7"
-                  },
-                  {
-                    icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12h6M12 9v6',
-                    title: "Knowledge Base",
-                    content: "500+ Help Articles"
-                  }
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-start gap-6">
-                    <div className="w-14 h-14 bg-[#820000]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              {/* Right Content - Visual Balance */}
+              <div className="flex flex-col justify-between">
+                <div className="p-8 bg-gradient-to-br from-[#820000]/5 to-[#820000]/10 backdrop-blur rounded-xl border border-white/90 h-full flex flex-col justify-center">
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full bg-[#820000]/10 flex items-center justify-center mx-auto mb-6">
                       <svg
+                        xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="w-7 h-7 text-[#820000]"
+                        className="w-12 h-12 text-[#820000]"
                       >
-                        <path d={feature.icon} />
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                       </svg>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                      <p className="text-lg text-gray-600">{feature.content}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            <div className="bg-white rounded-[2rem] shadow-2xl p-14 border-2 border-[#820000]/10">
-              <h3 className="text-4xl font-bold mb-12 text-gray-900">
-                Get Instant Vehicle Report
-              </h3>
-              <form className="space-y-8" onSubmit={handleSubmit}>
-                <div className="space-y-6">
-                  <input
-                    type="text"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-6 py-5 border-2 border-gray-200 rounded-xl focus:border-[#820000] focus:ring-4 focus:ring-[#820000]/20 text-lg"
-                    placeholder="Full Name"
-                    required
-                  />
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-6 py-5 border-2 border-gray-200 rounded-xl focus:border-[#820000] focus:ring-4 focus:ring-[#820000]/20 text-lg"
-                    placeholder="Email Address"
-                    required
-                  />
-                  <input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-6 py-5 border-2 border-gray-200 rounded-xl focus:border-[#820000] focus:ring-4 focus:ring-[#820000]/20 text-lg"
-                    placeholder="Phone Number"
-                    required
-                  />
-                  <input
-                    type="text"
-                    value={formData.vin}
-                    onChange={(e) => setFormData({ ...formData, vin: e.target.value })}
-                    className="w-full px-6 py-5 border-2 border-gray-200 rounded-xl focus:border-[#820000] focus:ring-4 focus:ring-[#820000]/20 text-lg"
-                    placeholder="Vehicle VIN"
-                    required
-                  />
-                  <textarea
-                    rows={5}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-6 py-5 border-2 border-gray-200 rounded-xl focus:border-[#820000] focus:ring-4 focus:ring-[#820000]/20 text-lg"
-                    placeholder="Special Requirements"
-                    required
-                  ></textarea>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Automotive Guidance</h3>
+                    <p className="text-gray-700 mb-6 max-w-md mx-auto">
+                      Our team of specialists is ready to provide personalized recommendations for your next vehicle.
+                    </p>
+
+                    <div className="mt-8 flex justify-center">
+                      <motion.button
+                        className="px-6 py-3 bg-[#820000] text-white font-semibold rounded-lg hover:bg-[#6a0000] transition-colors"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => router.push('/contact')}
+                      >
+                        Schedule Consultation <br /> 
+                      </motion.button>
+                    </div>
+                     <p className="py-3 text-sm text-[#820000] italic">or call us at +1 (806) 203 7774</p>
+                  </div>
                 </div>
-                <Button
-                  className="w-full bg-[#820000] hover:bg-[#6a0000] h-16 text-xl font-bold rounded-xl shadow-xl transition-all relative"
-                  type="submit"
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <motion.span
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity }}
-                      className="inline-block"
-                    >
-                      ⏳
-                    </motion.span>
-                  ) : (
-                    'Request Full Report'
-                  )}
-                </Button>
-                {success && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-center p-4 bg-green-100 text-green-700 rounded-xl"
-                  >
-                    Message sent successfully! <br /> 
-                    Redirecting in {redirectCountdown} seconds...
-                  </motion.div>
-                )}
-              </form>
+
+                <div className="mt-8 pt-6 border-t border-[#820000]/10">
+                  <p className="text-gray-700 text-center mb-4">Connect with us</p>
+                  <div className="flex justify-center space-x-4">
+                    {[
+                      { icon: 'M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z' },
+                      { icon: 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z' },
+                      { icon: 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z' }
+                    ].map((social, idx) => (
+                      <motion.a
+                        key={idx}
+                        href="#"
+                        className="w-10 h-10 rounded-full bg-[#820000]/10 flex items-center justify-center hover:bg-[#820000]/20 transition-colors"
+                        whileHover={{ y: -3 }}
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="w-5 h-5 text-[#820000]"
+                        >
+                          <path d={social.icon} />
+                        </svg>
+                      </motion.a>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

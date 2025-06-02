@@ -53,8 +53,7 @@ export function Header() {
               scrolled ? 'border-[#820000]/10' : 'border-white/20'
             }`}>
               <NavLink scrolled={scrolled} href="/">Home</NavLink>
-              <NavLink scrolled={scrolled} href="/about">About</NavLink>
-              <NavLink scrolled={scrolled} href="/contact">Contact</NavLink>
+              <NavLink scrolled={scrolled} href="/about">About</NavLink>              
               
               <DropdownMenu>
                 <DropdownMenuTrigger className={`group flex items-center gap-1 ${
@@ -75,6 +74,7 @@ export function Header() {
                   <DropdownItem href="/services/bike-history-report">Bike History</DropdownItem>
                 </DropdownMenuContent>
               </DropdownMenu>
+              <NavLink scrolled={scrolled} href="/contact">Contact</NavLink>
             </div>
           </nav>
 
