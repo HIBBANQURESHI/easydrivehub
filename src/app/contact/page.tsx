@@ -236,6 +236,19 @@ export default function ContactPage() {
                   </li>
                 </ul>
               </div>
+
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="w-full h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-[#fdeecd]"
+              >
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6998878.087057141!2d-105.365247988024!3d31.07021601468351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864070360b823249%3A0x16eb1c8f1808de3c!2sTexas%2C%20USA!5e0!3m2!1sen!2s!4v1748886951321!5m2!1sen!2s"
+                width="600"
+                height="450"
+                className="border-0"
+                allowFullScreen
+                loading="lazy">
+                </iframe>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>

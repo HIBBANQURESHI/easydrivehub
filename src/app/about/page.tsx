@@ -30,7 +30,7 @@ export default function AboutPage() {
             priority
           />
         </div>
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={stagger}
@@ -49,7 +49,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-[#F9F6EE]">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -63,11 +63,11 @@ export default function AboutPage() {
                 </h2>
               </motion.div>
               <motion.p variants={fadeIn} className="text-lg text-gray-600">
-                When you're looking for a pre-owned car, it's important to arm yourself with accurate data. 
+                When you're looking for a pre-owned car, it's important to arm yourself with accurate data.
                 Auto Profile Check delivers comprehensive vehicle history reports instantly at transparent prices.
               </motion.p>
               <motion.p variants={fadeIn} className="text-lg text-gray-600">
-                Founded on the principle of automotive transparency, our mission is to empower every used car buyer 
+                Founded on the principle of automotive transparency, our mission is to empower every used car buyer
                 with crystal-clear vehicle insights and peace of mind.
               </motion.p>
               <motion.div variants={fadeIn}>
@@ -76,7 +76,7 @@ export default function AboutPage() {
                 </Button>
               </motion.div>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -105,7 +105,7 @@ export default function AboutPage() {
               { number: "1.5K+", label: "Happy Clients" },
               { number: "5K+", label: "Reports Generated" }
             ].map((stat, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial="hidden"
                 whileInView="visible"
@@ -122,7 +122,7 @@ export default function AboutPage() {
       </section>
 
       {/* Working Hours Section */}
-      <section className="py-20 md:py-28 bg-[#F9F6EE]">
+      {/* <section className="py-20 md:py-28 bg-[#F9F6EE]">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <motion.div 
@@ -132,21 +132,23 @@ export default function AboutPage() {
               variants={stagger}
               className="space-y-8"
             >
+              sda
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-[#F9F6EE] text-[#820000] ">
         <div className="container-custom text-center">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
             className="max-w-3xl mx-auto space-y-8"
           >
+
             <motion.h2 variants={fadeIn} className="text-4xl md:text-5xl font-bold">
               Ready for Full Transparency?
             </motion.h2>

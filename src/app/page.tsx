@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -18,10 +18,24 @@ const stagger = {
 };
 
 export default function Home() {
-
-  const [formData, setFormData] = useState({ name: '', email: '', vin: '', message: '' });
+  const router = useRouter();
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', vin: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [redirectCountdown, setRedirectCountdown] = useState(0);
+
+  useEffect(() => {
+    if (redirectCountdown > 0) {
+      const timer = setTimeout(() => {
+        if (redirectCountdown === 1) {
+          router.push('/services/car-history-report');
+        } else {
+          setRedirectCountdown(redirectCountdown - 1);
+        }
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [redirectCountdown, router]);
 
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
@@ -39,18 +53,16 @@ export default function Home() {
 
       if (response.ok) {
         setSuccess(true);
-        setFormData({ name: '', email: '', vin: '', message: '' });
-        setTimeout(() => setSuccess(false), 3000);
+        setFormData({ name: '', email: '', phone: '', vin: '', message: '' });
+        setRedirectCountdown(3);
       }
     } finally {
       setLoading(false);
     }
   };
 
-
   return (
     <MainLayout>
-      {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#820000] to-[#600000] text-white pt-32 pb-24 md:py-40 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image
@@ -111,7 +123,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-28 bg-[#F9F6EE]">
         <div className="container-custom">
           <motion.div
@@ -181,7 +192,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-20 md:py-28 bg-[#820000] text-white">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -213,7 +223,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonial Carousel */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -268,7 +277,6 @@ export default function Home() {
         </div>
       </motion.div>
 
-      {/* Contact Section */}
       <section className="py-28 bg-[#F9F6EE]">
         <div className="container-custom">
           <motion.div
@@ -354,6 +362,14 @@ export default function Home() {
                     required
                   />
                   <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full px-6 py-5 border-2 border-gray-200 rounded-xl focus:border-[#820000] focus:ring-4 focus:ring-[#820000]/20 text-lg"
+                    placeholder="Phone Number"
+                    required
+                  />
+                  <input
                     type="text"
                     value={formData.vin}
                     onChange={(e) => setFormData({ ...formData, vin: e.target.value })}
@@ -393,7 +409,8 @@ export default function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center p-4 bg-green-100 text-green-700 rounded-xl"
                   >
-                    Message sent successfully!
+                    Message sent successfully! <br /> 
+                    Redirecting in {redirectCountdown} seconds...
                   </motion.div>
                 )}
               </form>
